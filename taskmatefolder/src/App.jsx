@@ -10,6 +10,7 @@ import ServicesPage from "./pages/ServicesPage.jsx";
 import AddServicePage from "./pages/AddServicePage.jsx"; 
 import RequestService from './pages/RequestService.jsx';
 import MyTasksPage from "./pages/MyTasksPage.jsx";
+import FindTask from "./pages/FindTask.jsx";
 
 axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL;
 axios.defaults.withCredentials = true;
@@ -26,6 +27,7 @@ function App() {
           <Route path="/services/new" element={<AddServicePage />} />
           <Route path="/account/tasks" element={<MyTasksPage />} />
           <Route path="/request-service" element={<RequestService />} />
+          <Route path="/find-task" element={<FindTask />} />
         </Route>
       </Routes>
     </UserContextProvider>
