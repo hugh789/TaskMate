@@ -149,10 +149,12 @@ app.post('/api/services', async (req, res) => {
 
   jwt.verify(token, jwtSecret, {}, async (err, userData) => {
     if (err) return res.status(401).json({ error: 'Unauthorized' });
-
     try {
+      const {_id} = await Category.findOne({name:categoryName});
+      console.log(categoryName,_id);
       const servicesDoc = await Services.create({
-        owner: userData.id,
+        provider: userData.id,
+        category: _id,
         title,
         description,
         categoryName,  // Save only the category name as a string
