@@ -1,9 +1,11 @@
+// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
-  "./src/**/*.{js,ts,jsx,tsx}",
-],
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/flowbite/**/*.js"
+  ],
   theme: {
     extend: {
       colors: {
@@ -11,6 +13,8 @@ export default {
       },
     },
   },
-  plugins: [require('daisyui')],
+  plugins: [
+    require('daisyui'),
+    require('flowbite/plugin')
+  ],
 }
-
