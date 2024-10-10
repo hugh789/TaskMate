@@ -2,12 +2,21 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
 import House1 from '../assets/house/1.jpeg';
-import House2 from '../assets/house/22.jpeg';
+import House2 from '../assets/house/2.jpeg';
 import House3 from '../assets/house/3.jpeg';
 import House4 from '../assets/house/4.jpeg';
+import Banner1 from '../assets/banner/hero01.jpg';
+import Banner2 from '../assets/banner/hero02.png';
+import Banner3 from '../assets/banner/hero03.jpg';
+import { Swiper, SwiperSlide } from './Swiper.jsx';
+// Import Swiper React components
+// import { Swiper, SwiperSlide } from 'swiper/react';
 
+// Import Swiper styles
+// import 'swiper/css';
 export default function IndexPage() {
 	const servicePhotos = [House1, House2, House3, House4];
+	const [banners, setBanners] = useState([Banner1, Banner2, Banner3]);
 	const [currentCategoryId, setCurrentCategoryId] = useState(null);
 	const [services, setServices] = useState([]);
 	const [searchServices, setSearchServices] = useState([]);
@@ -16,7 +25,6 @@ export default function IndexPage() {
 	const [loadingCategories, setLoadingCategories] = useState(true);
 	const [errorServices, setErrorServices] = useState(null);  // Added error states
 	const [errorCategories, setErrorCategories] = useState(null);
-
 	// Fetch services
 	useEffect(() => {
 		axios.get('/api/services')
@@ -65,6 +73,38 @@ export default function IndexPage() {
 
 	return (
 		<div className="mt-8">
+			{banners ? (
+				<div className="mb-8">
+				<Swiper >
+				{banners.length > 0 ? (
+						banners.map(banner => (
+							<SwiperSlide key={banner}>
+								<div className="flex flex-row ">
+									<div className="basis-1/2">
+										<img src={banner} alt="test" className="h-72 w-full object-cover transition-all duration-300"/>
+									</div>
+									<div className="basis-1/2 flex items-center justify-center bg-green-700 text-white">
+										<div className="mx-12">
+											<h1 className="text-2xl font-bold mb-2">Local Service</h1>
+											<div className="text-gray-300">TaskMate offers a variety of services like plumbing,electrical, and cleaning, helping you quickly connect withtrusted professionals</div>
+											<button className="text-white py-3 px-5 rounded shadow-md text-center cursor-pointer hover:bg-teal-400 bg-teal-500 mt-4">Booking Now</button>
+										</div>
+
+									</div>
+								</div>
+
+
+							</SwiperSlide>
+						))
+					) : (
+						<p>No categories available at the moment.</p>
+					)}
+				</Swiper>
+				</div>
+				) : (
+				<p> &nbsp; </p>
+			)}
+
 			{/* Display Categories */}
 			<div className="mb-8">
 				<h2 className="text-2xl font-bold mb-4">Categories</h2>
