@@ -8,6 +8,7 @@ import {UserContextProvider} from "./UserContext";
 import ProfilePage from "./pages/ProfilePage.jsx";
 import ServicesPage from "./pages/ServicesPage.jsx";
 import ServicePage from "./pages/ServicePage.jsx";
+import BookingServicePage from "./pages/BookingServicePage.jsx";
 import AddServicePage from "./pages/AddServicePage.jsx";
 import RequestService from './pages/RequestService.jsx';
 import MyTasksPage from "./pages/MyTasksPage.jsx";
@@ -26,6 +27,7 @@ function App() {
           <Route path="/account" element={<ProfilePage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/service/:id" element={<ServicePage />} />
+          <Route path="/service/booking/:id" element={<BookingServicePage />} />
           <Route path="/services/new" element={<AddServicePage />} />
           <Route path="/account/tasks" element={<MyTasksPage />} />
           <Route path="/request-service" element={<RequestService />} />

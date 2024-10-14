@@ -151,7 +151,6 @@ app.post('/api/services', async (req, res) => {
     if (err) return res.status(401).json({ error: 'Unauthorized' });
     try {
       const {_id} = await Category.findOne({name:categoryName});
-      console.log(categoryName,_id);
       const servicesDoc = await Services.create({
         provider: userData.id,
         category: _id,
@@ -181,15 +180,26 @@ app.get('/api/services', async (req, res) => {
   }
 });
 
+app.get('/api/service/:id', async (req,res) => {
+  const {id} = req.params;
+  try {
+    const service = await Services.findById(id); // Ensure `Services` is correctly imported and referenced
+    res.json(service);  // Send the fetched services as the response
+  } catch (error) {
+    console.error('Error fetching services:', error); // Log the error
+    res.status(500).json({ error: 'Internal Server Error' }); // Return a 500 status code with an error message
+  }
+});
 
 
 // POST /api/request-service: Allow users to request a service
 app.post('/api/request-service', authenticateUser, async (req, res) => {
-  const { title, location, description, neededBy, notes } = req.body;
-
+  const { title, service, category, location, description, neededBy, notes } = req.body;
   try {
     const serviceRequest = new ServiceRequest({
       user: req.user.id, // Use the authenticated user’s ID
+      service,
+      category,
       title,
       location,
       description,
@@ -217,8 +227,7 @@ app.get('/api/request-service', async (req, res) => {
     jwt.verify(token, jwtSecret, {}, async (err, userData) => {
       if (err) return res.status(401).json({ error: 'Unauthorized' });
 
-      
-      const serviceRequests = await ServiceRequest.find({ user: userData.id }).populate('category');
+      const serviceRequests = await ServiceRequest.find({ user: userData.id }).populate('service').populate('category').populate('user');
       res.json(serviceRequests);
     });
   } catch (error) {
