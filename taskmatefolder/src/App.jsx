@@ -14,6 +14,7 @@ import FindTask from "./pages/FindTask.jsx";
 import Reviews from "./pages/Reviews.jsx";
 import RegisterPage from "./pages/RegisterPage.jsx";
 import BookingsPage from "./pages/BookingsPage.jsx";
+import CategoryServicesPage from "./pages/CategoryServicesPage.jsx";
 
 // Set default axios configurations
 axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL;
@@ -34,7 +35,8 @@ function App() {
           <Route path="/request-service" element={<RequestService />} />
           <Route path="/find-task" element={<FindTask />} />
           <Route path="/review" element={<Reviews />} />
-          <Route path="/bookings/submit" element={<BookingsPage />} /> {/* New route for booking services */}
+          <Route path="/bookings/submit" element={<BookingsPage />} />
+          <Route path="/category/:categoryId" element={<CategoryServicesPage />} /> {/* Updated route */}
         </Route>
       </Routes>
     </UserContextProvider>

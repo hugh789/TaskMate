@@ -8,7 +8,7 @@ export default function IndexPage() {
   const [loadingServices, setLoadingServices] = useState(true);
   const [loadingCategories, setLoadingCategories] = useState(true);
   const [errorServices, setErrorServices] = useState(null);
-  const [errorCategories, setErrorCategories] = useState(null);
+  const [errorCategories, setErrorCategories] =useState(null);
   const [searchTerm, setSearchTerm] = useState("");
 
   // Fetch services
@@ -182,12 +182,13 @@ export default function IndexPage() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {categories.length > 0 ? (
                 categories.map((category) => (
-                  <div
+                  <Link
                     key={category._id}
-                    className="bg-blue-500 text-white p-4 rounded-lg shadow-md text-center"
+                    to={`/category/${category._id}`}  // Make the category clickable
+                    className="bg-blue-500 text-white p-4 rounded-lg shadow-md text-center hover:bg-blue-600 transition-all duration-200 ease-in-out cursor-pointer"
                   >
                     <p className="font-semibold">{category.name}</p>
-                  </div>
+                  </Link>
                 ))
               ) : (
                 <p>No categories available at the moment.</p>
@@ -204,7 +205,7 @@ export default function IndexPage() {
             <p className="text-red-500">{errorServices}</p>
           ) : services.length > 0 ? (
             services.map((service) => (
-              <Link to={"/service/" + service._id} key={service._id}>
+              <Link to={`/service/${service._id}`} key={service._id}>
                 <div className="bg-gray-500 mb-2 rounded-2xl flex">
                   {service.photos?.[0] && (
                     <img

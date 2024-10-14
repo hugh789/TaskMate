@@ -27,14 +27,27 @@ router.post('/register', authenticateUser, async (req, res) => {
   }
 });
 
-// GET: Fetch all services, optionally filter by categoryId
+// GET: Fetch all services
 router.get('/all', async (req, res) => {
-  const { categoryId } = req.query;
-  const filter = categoryId ? { categoryId } : {};
-
   try {
-    const services = await ServicesModel.find(filter);
+    const services = await ServicesModel.find();
     res.status(200).json(services);
+  } catch (error) {
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// GET: Fetch services by category
+router.get('/by-category/:categoryId', async (req, res) => {
+  const { categoryId } = req.params;
+  try {
+    const category = await CategoryModel.findById(categoryId);
+    if (!category) {
+      return res.status(404).json({ error: 'Category not found' });
+    }
+
+    const services = await ServicesModel.find({ categoryId });
+    res.status(200).json({ services, category });
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' });
   }
