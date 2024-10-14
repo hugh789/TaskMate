@@ -7,7 +7,7 @@ export default function MyTasksPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('/api/request-service', { withCredentials: true })  // Ensure cookies are sent
+    axios.get('/api/bookings/all', { withCredentials: true })  // Ensure cookies are sent
       .then(response => {
         setTasks(response.data);
         setLoading(false);

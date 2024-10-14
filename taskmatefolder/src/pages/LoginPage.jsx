@@ -13,7 +13,7 @@ export default function LoginPage() {
     try {
       // Correct the URL to point to the backend API on port 4000
       const { data } = await axios.post(
-        'http://localhost:4000/api/login',  // Backend API URL
+        'http://localhost:4000/api/user/login',  // Backend API URL
         { email, password },
         { withCredentials: true }  // Ensure credentials (cookies) are included in the request
       );

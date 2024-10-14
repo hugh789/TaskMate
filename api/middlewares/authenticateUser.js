@@ -1,7 +1,6 @@
 // middlewares/authenticateUser.js
 const jwt = require('jsonwebtoken');
-const jwtSecret = 'adsfasdgwe';
-
+const jwtSecret = 'adsfasdgwe'; // Fixed missing semicolon
 const authenticateUser = (req, res, next) => {
   const { token } = req.cookies;
   if (!token) {

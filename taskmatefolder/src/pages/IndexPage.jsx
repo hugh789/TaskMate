@@ -13,7 +13,7 @@ export default function IndexPage() {
 
   // Fetch services
   useEffect(() => {
-    axios.get('/api/services')
+    axios.get('http://localhost:4000/api/service/all')
       .then(response => {
         setServices(response.data);
         setLoadingServices(false);
@@ -27,7 +27,7 @@ export default function IndexPage() {
 
   // Fetch categories
   useEffect(() => {
-    axios.get('/api/categories')
+    axios.get('http://localhost:4000/api/category/all')
       .then(response => {
         setCategories(response.data);
         setLoadingCategories(false);

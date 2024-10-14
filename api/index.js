@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const app = express();
+const authenticateUser = require('./middlewares/authenticateUser');
+const app = express();  // Fixed the incomplete variable 'app'
 
 const userRoutes = require('./routes/userRoutes');
 const serviceRoutes = require('./routes/serviceRoutes');
@@ -42,7 +43,6 @@ app.use('/api/service', serviceRoutes);
 app.use('/api/service-provider', serviceProviderRoutes);
 app.use('/api/category', categoriesRoutes);
 app.use('/api/booking', bookingRoutes);
-
 
 // Start the server
 app.listen(4000, (err) => {
