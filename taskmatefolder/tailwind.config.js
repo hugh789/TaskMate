@@ -10,13 +10,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#F5385D',
+        primary: 'black',
+      },
+      fontFamily: {
+        sans: ['Helvetica', 'Arial', 'sans-serif'],
+        serif: ['Merriweather', 'serif'],
+        heading: ['Roboto', 'sans-serif'],
+        body: ['Lora', 'serif'],
       },
     },
   },
   plugins: [
     require('daisyui'),
     require('flowbite/plugin'),
-    require('preline/plugin')
+    require('preline/plugin'),
+    require('@tailwindcss/typography'), // Add the Typography plugin here
   ],
 };
