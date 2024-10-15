@@ -100,7 +100,7 @@ export default function IndexPage() {
     }'
     className="relative w-full"
   >
-    <div className="hs-carousel relative overflow-hidden w-full h-screen max-h-[300px]">
+    <div className="hs-carousel relative overflow-hidden w-full h-screen max-h-[400px]">
       <div className="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
         
         {/* First Slide */}
@@ -163,58 +163,59 @@ export default function IndexPage() {
 </div>
 
 
-      {/* Display Categories */}
-      <div className="mb-8"> 
-        <h2 className="text-2xl font-bold mb-4 py-2">Categories</h2> 
-        {loadingCategories ? (
-          <p>Loading categories...</p>
-        ) : errorCategories ? (
-          <p className="text-red-500">{errorCategories}</p> 
-        ) : (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"> 
-            {categories.map((category) => (
-              <Link 
-                key={category._id} 
-                to={`/category/${category._id}`} 
-                className="bg-blue-500 text-white p-4 rounded-lg shadow-md text-center hover:bg-blue-600 transition-all duration-200 ease-in-out cursor-pointer" 
-              >
-                <p className="font-semibold">{category.name}</p> 
-              </Link>
-            ))}
-          </div>
-        )}
-      </div>
+{/* Display Categories */}
+<div className="mb-8 w-full max-w-screen-lg mx-auto"> {/* Centered and narrower */}
+  <h2 className="text-2xl font-bold mb-4 py-2 text-left">Categories</h2>
+  {loadingCategories ? (
+    <p className="text-center">Loading categories...</p>
+  ) : errorCategories ? (
+    <p className="text-red-500 text-center">{errorCategories}</p>
+  ) : (
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"> 
+      {categories.map((category) => (
+        <Link 
+          key={category._id} 
+          to={`/category/${category._id}`} 
+          className="bg-blue-500 text-white p-4 rounded-lg shadow-md text-center hover:bg-blue-600 transition-all duration-200 ease-in-out cursor-pointer" 
+        >
+          <p className="font-semibold">{category.name}</p> 
+        </Link>
+      ))}
+    </div>
+  )}
+</div>
 
-      {/* Display Services */}
-      <div className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 py16">Services</h2>
-        <div className="grid gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-3"> {/* Adjusted grid for responsiveness */}
-          {loadingServices ? (
-            <p>Loading services...</p>
-          ) : errorServices ? (
-            <p className="text-red-500">{errorServices}</p>
-          ) : (
-            services.map((service) => (
-              <Link to={`/service/${service._id}`} key={service._id} className="group"> {/* Added className for hover effects */}
-                <div className="bg-gray-500 mb-2 rounded-2xl flex overflow-hidden"> {/* Added overflow-hidden */}
-                  {service.photos?.[0] && (
-                    <img
-                      className="rounded-2xl object-cover aspect-square w-full group-hover:scale-105 transition-transform duration-200" // Improved image responsiveness and hover effect
-                      src={service.photos?.[0]}
-                      alt=""
-                    />
-                  )}
-                </div>
-                <h2 className="font-bold">{service.title}</h2>
-                <h3 className="text-sm text-gray-500">{service.description}</h3>
-                <div className="mt-1">
-                  <span className="font-bold">${service.price}</span>
-                </div>
-              </Link>
-            ))
-          )}
-        </div>
-      </div>
+{/* Display Services */}
+<div className="mb-8 w-full max-w-screen-lg mx-auto"> {/* Centered and narrower */}
+  <h2 className="text-2xl font-bold mb-4 py-2 text-left">Services</h2>
+  {loadingServices ? (
+    <p className="text-center">Loading services...</p>
+  ) : errorServices ? (
+    <p className="text-red-500 text-center">{errorServices}</p>
+  ) : (
+    <div className="grid gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3"> {/* Reduced to 3 columns on large screens */}
+      {services.map((service) => (
+        <Link to={`/service/${service._id}`} key={service._id} className="group"> {/* Added className for hover effects */}
+          <div className="bg-gray-500 mb-2 rounded-2xl flex overflow-hidden"> {/* Added overflow-hidden */}
+            {service.photos?.[0] && (
+              <img
+                className="rounded-2xl object-cover aspect-square w-full group-hover:scale-105 transition-transform duration-200" // Improved image responsiveness and hover effect
+                src={service.photos?.[0]}
+                alt=""
+              />
+            )}
+          </div>
+          <h2 className="font-bold">{service.title}</h2>
+          <h3 className="text-sm text-gray-500">{service.description}</h3>
+          <div className="mt-1">
+            <span className="font-bold">${service.price}</span>
+          </div>
+        </Link>
+      ))}
+    </div>
+  )}
+</div>
+
     </>
   );
 }

@@ -7,7 +7,8 @@ export default function Header() {
 
   return (
     <header className="w-full bg-white shadow-md px-6 py-4">
-      <div className="flex items-center justify-between max-w-screen-xl">
+      <div className="flex items-center justify-between max-w-screen-xl mx-auto">
+        
         {/* Left side: Logo and navigation links */}
         <div className="flex items-center gap-6">
           <Link to={'/'} className="flex items-center gap-2">
@@ -35,7 +36,7 @@ export default function Header() {
         </div>
 
         {/* Right side: Search and profile */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 ml-auto">
           <button className="flex items-center bg-primary text-white p-2 rounded-full">
             <svg
               xmlns="http://www.w3.org/2000/svg"
