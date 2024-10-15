@@ -439,7 +439,7 @@
   resolved "https://registry.npmjs.org/@pkgjs/parseargs/-/parseargs-0.11.0.tgz"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
-"@popperjs/core@^2.9.3":
+"@popperjs/core@^2.11.2", "@popperjs/core@^2.9.3":
   version "2.11.8"
   resolved "https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
@@ -2333,6 +2333,13 @@ postcss@^8.4.23, postcss@^8.4.41, postcss@^8.4.43:
     nanoid "^3.3.7"
     picocolors "^1.1.0"
     source-map-js "^1.2.1"
+
+preline@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/preline/-/preline-2.5.1.tgz#d21f1a94af1bd0e5556742bb992b463ce0441881"
+  integrity sha512-fEXOsz0xLfTm5sJmNanourrMjwjcgGtaVNg8Pt6GzUbZ/oXHIdcR94LBdeE0Ea0pBPFOOHzEL5LQwSbAvCJEfw==
+  dependencies:
+    "@popperjs/core" "^2.11.2"
 
 prelude-ls@^1.2.1:
   version "1.2.1"

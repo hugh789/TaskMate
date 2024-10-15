@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import 'preline'; // Assuming this is a CSS framework or similar
 
 export default function IndexPage() {
   const [services, setServices] = useState([]);
@@ -8,61 +9,50 @@ export default function IndexPage() {
   const [loadingServices, setLoadingServices] = useState(true);
   const [loadingCategories, setLoadingCategories] = useState(true);
   const [errorServices, setErrorServices] = useState(null);
-  const [errorCategories, setErrorCategories] =useState(null);
+  const [errorCategories, setErrorCategories] = useState(null); 
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Fetch services
   useEffect(() => {
-    axios.get('http://localhost:4000/api/service/all')
-      .then(response => {
+    const fetchServices = async () => { 
+      try {
+        const response = await axios.get('http://localhost:4000/api/service/all');
         setServices(response.data);
-        setLoadingServices(false);
-      })
-      .catch(error => {
+      } catch (error) {
         console.error('Error fetching services:', error);
         setErrorServices('Error fetching services');
+      } finally {
         setLoadingServices(false);
-      });
+      }
+    };
+
+    fetchServices();
   }, []);
 
-  // Fetch categories
   useEffect(() => {
-    axios.get('http://localhost:4000/api/category/all')
-      .then(response => {
+    const fetchCategories = async () => {
+      try {
+        const response = await axios.get('http://localhost:4000/api/category/all');
         setCategories(response.data);
-        setLoadingCategories(false);
-      })
-      .catch(error => {
+      } catch (error) {
         console.error('Error fetching categories:', error);
-        setErrorCategories('Error fetching categories');
+        setErrorCategories('Error fetching categories'); 
+      } finally {
         setLoadingCategories(false);
-      });
+      }
+    };
+
+    fetchCategories();
   }, []);
 
   return (
     <>
-      {/* Hero Image */}
-      <div
-        className="hero min-h-screen"
-        style={{
-          backgroundImage: "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
-        }}
-      >
-        <div className="hero-overlay bg-opacity-60"></div>
-        <div className="hero-content text-neutral-content text-center">
-          <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-            <p className="mb-5">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-              quasi. In deleniti eaque aut repudiandae et a id nisi.
-            </p>
-            <button className="btn btn-primary">Get Started</button>
-          </div>
-        </div>
+      {/* Tagline */}
+      <div className="text-center py- bg-gray-50">
+        <h1 className="text-3xl font-bold text-gray-800">Book certified help. Love your home.</h1>
       </div>
 
       {/* Search Bar */}
-      <div className="mt-8">
+      <div className="mt-8 py-5">
         <form className="max-w-lg mx-auto">
           <div className="flex">
             <label
@@ -141,7 +131,7 @@ export default function IndexPage() {
                 type="search"
                 id="search-dropdown"
                 className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
-                placeholder="Search Mockups, Logos, Design Templates..."
+                placeholder="Search..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 required
@@ -170,46 +160,106 @@ export default function IndexPage() {
             </div>
           </div>
         </form>
-
-        {/* Display Categories */}
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Categories</h2>
-          {loadingCategories ? (
-            <p>Loading categories...</p>
-          ) : errorCategories ? (
-            <p className="text-red-500">{errorCategories}</p>
-          ) : (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {categories.length > 0 ? (
-                categories.map((category) => (
-                  <Link
-                    key={category._id}
-                    to={`/category/${category._id}`}  // Make the category clickable
-                    className="bg-blue-500 text-white p-4 rounded-lg shadow-md text-center hover:bg-blue-600 transition-all duration-200 ease-in-out cursor-pointer"
-                  >
-                    <p className="font-semibold">{category.name}</p>
-                  </Link>
-                ))
-              ) : (
-                <p>No categories available at the moment.</p>
-              )}
+      </div>
+      {/* Preline Carousel */}
+      <div className="w-full bg-white rounded-lg shadow-md dark:bg-neutral-800">
+        <div data-hs-carousel='{
+            "loadingClasses": "opacity-0",
+            "dotsItemClasses": "hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-blue-500 dark:hs-carousel-active:border-blue-500"
+          }' 
+          data-hs-carousel-options='{
+            "interval": 5000, 
+            "autoplay": true
+          }'
+          className="relative">
+          
+          <div className="hs-carousel relative overflow-hidden w-full min-h-64 rounded-lg">
+            <div className="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
+              
+              {/* First Slide */}
+              <div className="hs-carousel-slide flex justify-center items-center">
+                <img src="https://images.ctfassets.net/vwt5n1ljn95x/1yzzyx2EqAdFjES7LImaEa/cb848bba9d6af5474b1b7c3309539824/Homepage_Moving.png?w=1200&q=75&fm=webp" 
+                     alt="First slide image" 
+                     className="object-cover w-[950px] h-[491px] rounded-lg" />
+              </div>
+              
+              {/* Second Slide */}
+              <div className="hs-carousel-slide flex justify-center items-center">
+                <img src="https://images.ctfassets.net/vwt5n1ljn95x/3jKP7rZEeOMh285VMG9zVJ/13156819447cd03822bf9fb32d213a16/Homepage_Cleaning.png?w=1200&q=75&fm=webp" 
+                     alt="Second slide image" 
+                     className="object-cover w-[950px] h-[491px] rounded-lg" />
+              </div>
+              
+              {/* Third Slide */}
+              <div className="hs-carousel-slide flex justify-center items-center">
+                <img src="https://images.ctfassets.net/vwt5n1ljn95x/2nfa2ouVwN7lG7FREVwmB0/ae3f6acd5b31680e9d998a24c1da851e/HomeRepair_3_950x491.jpg?w=1200&q=75&fm=webp" 
+                     alt="Third slide image" 
+                     className="object-cover w-[950px] h-[491px] rounded-lg" />
+              </div>
+              
             </div>
-          )}
-        </div>
+          </div>
 
-        {/* Display Services */}
-        <div className="grid gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+          {/* Carousel Controls */}
+          <button type="button" className="hs-carousel-prev absolute inset-y-0 start-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none rounded-s-lg">
+            <span className="text-2xl" aria-hidden="true">
+              <svg className="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M15 18L9 12l6-6"></path>
+              </svg>
+            </span>
+            <span className="sr-only">Previous</span>
+          </button>
+          <button type="button" className="hs-carousel-next absolute inset-y-0 end-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none rounded-e-lg">
+            <span className="text-2xl" aria-hidden="true">
+              <svg className="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 18l6-6-6-6"></path>
+              </svg>
+            </span>
+            <span className="sr-only">Next</span>
+          </button>
+
+          {/* Carousel Pagination */}
+          <div className="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 space-x-2"></div>
+        </div>
+      </div>
+
+      {/* Display Categories */}
+      <div className="mb-8"> 
+        <h2 className="text-2xl font-bold mb-4 py-2">Categories</h2> 
+        {loadingCategories ? (
+          <p>Loading categories...</p>
+        ) : errorCategories ? (
+          <p className="text-red-500">{errorCategories}</p> 
+        ) : (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"> 
+            {categories.map((category) => (
+              <Link 
+                key={category._id} 
+                to={`/category/${category._id}`} 
+                className="bg-blue-500 text-white p-4 rounded-lg shadow-md text-center hover:bg-blue-600 transition-all duration-200 ease-in-out cursor-pointer" 
+              >
+                <p className="font-semibold">{category.name}</p> 
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Display Services */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold mb-4 py16">Services</h2>
+        <div className="grid gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-3"> {/* Adjusted grid for responsiveness */}
           {loadingServices ? (
             <p>Loading services...</p>
           ) : errorServices ? (
             <p className="text-red-500">{errorServices}</p>
-          ) : services.length > 0 ? (
+          ) : (
             services.map((service) => (
-              <Link to={`/service/${service._id}`} key={service._id}>
-                <div className="bg-gray-500 mb-2 rounded-2xl flex">
+              <Link to={`/service/${service._id}`} key={service._id} className="group"> {/* Added className for hover effects */}
+                <div className="bg-gray-500 mb-2 rounded-2xl flex overflow-hidden"> {/* Added overflow-hidden */}
                   {service.photos?.[0] && (
                     <img
-                      className="rounded-2xl object-cover aspect-square"
+                      className="rounded-2xl object-cover aspect-square w-full group-hover:scale-105 transition-transform duration-200" // Improved image responsiveness and hover effect
                       src={service.photos?.[0]}
                       alt=""
                     />
@@ -222,8 +272,6 @@ export default function IndexPage() {
                 </div>
               </Link>
             ))
-          ) : (
-            <p>No services available at the moment.</p>
           )}
         </div>
       </div>

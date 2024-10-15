@@ -4,7 +4,8 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/flowbite/**/*.js"
+    "./node_modules/flowbite/**/*.js",
+    "./node_modules/preline/dist/*.js"
   ],
   theme: {
     extend: {
@@ -15,6 +16,7 @@ export default {
   },
   plugins: [
     require('daisyui'),
-    require('flowbite/plugin')
+    require('flowbite/plugin'),
+    require('preline/plugin')
   ],
-}
+};
