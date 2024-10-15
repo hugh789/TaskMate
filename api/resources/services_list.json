@@ -1,0 +1,848 @@
+[
+  {
+      "_id": "6707a24315c72b0cbb0a3171",
+      "title": "Leak Detection",
+      "description": "Detect and repair leaks in pipes and plumbing systems.",
+      "categoryId": "67030e9c701f56fbb56ec951"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3172",
+      "title": "Pipe Installation/Repair",
+      "description": "Install and repair plumbing pipes.",
+      "categoryId": "67030e9c701f56fbb56ec951"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3173",
+      "title": "Drain Cleaning",
+      "description": "Clear blockages and clean drains for smooth water flow.",
+      "categoryId": "67030e9c701f56fbb56ec951"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3174",
+      "title": "Water Heater Repair/Installation",
+      "description": "Install and repair water heaters for residential and commercial use.",
+      "categoryId": "67030e9c701f56fbb56ec951"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3175",
+      "title": "Toilet Repair",
+      "description": "Fix toilet issues such as leaks, clogs, and flushing problems.",
+      "categoryId": "67030e9c701f56fbb56ec951"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3176",
+      "title": "Sewer Line Repair",
+      "description": "Repair and maintain sewer lines to prevent leaks and blockages.",
+      "categoryId": "67030e9c701f56fbb56ec951"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3177",
+      "title": "Faucet Installation/Repair",
+      "description": "Install and repair faucets for kitchens, bathrooms, and utility areas.",
+      "categoryId": "67030e9c701f56fbb56ec951"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3178",
+      "title": "Gas Line Services",
+      "description": "Install and repair gas lines for home appliances.",
+      "categoryId": "67030e9c701f56fbb56ec951"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3179",
+      "title": "Electrical Wiring/Repair",
+      "description": "Handle all electrical wiring and repair work.",
+      "categoryId": "67030e9c701f56fbb56ec952"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3180",
+      "title": "Lighting Installation",
+      "description": "Install various types of indoor and outdoor lighting systems.",
+      "categoryId": "67030e9c701f56fbb56ec952"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3181",
+      "title": "Ceiling Fan Installation",
+      "description": "Install and repair ceiling fans.",
+      "categoryId": "67030e9c701f56fbb56ec952"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3182",
+      "title": "Circuit Breaker Repair",
+      "description": "Repair and replace faulty circuit breakers.",
+      "categoryId": "67030e9c701f56fbb56ec952"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3183",
+      "title": "Electrical Outlet Installation",
+      "description": "Install and repair electrical outlets and switches.",
+      "categoryId": "67030e9c701f56fbb56ec952"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3184",
+      "title": "Generator Installation",
+      "description": "Install generators for backup power.",
+      "categoryId": "67030e9c701f56fbb56ec952"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3185",
+      "title": "Home Automation (Smart Lights, Switches)",
+      "description": "Install and set up smart home lighting systems.",
+      "categoryId": "67030e9c701f56fbb56ec952"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3186",
+      "title": "Electrical Safety Inspections",
+      "description": "Conduct safety inspections of residential and commercial electrical systems.",
+      "categoryId": "67030e9c701f56fbb56ec952"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3187",
+      "title": "TV Mounting",
+      "description": "Mount TVs securely on walls.",
+      "categoryId": "67030e9c701f56fbb56ec953"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3188",
+      "title": "Furniture Assembly",
+      "description": "Assemble furniture for homes and offices.",
+      "categoryId": "67030e9c701f56fbb56ec953"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3189",
+      "title": "Picture Hanging",
+      "description": "Hang pictures and artwork professionally.",
+      "categoryId": "67030e9c701f56fbb56ec953"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3190",
+      "title": "Door Knob Repair/Replacement",
+      "description": "Repair and replace door knobs and locks.",
+      "categoryId": "67030e9c701f56fbb56ec953"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3191",
+      "title": "Curtain Rod Installation",
+      "description": "Install curtain rods and window treatments.",
+      "categoryId": "67030e9c701f56fbb56ec953"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3192",
+      "title": "Minor Home Repairs",
+      "description": "Fix small issues around the home, such as leaks, holes, and more.",
+      "categoryId": "67030e9c701f56fbb56ec953"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3193",
+      "title": "Shelving Installation",
+      "description": "Install custom shelves for storage and decor.",
+      "categoryId": "67030e9c701f56fbb56ec953"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3194",
+      "title": "AC Installation/Repair",
+      "description": "Install and repair air conditioning systems for homes and businesses.",
+      "categoryId": "67030e9c701f56fbb56ec954"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3195",
+      "title": "Heater Repair/Maintenance",
+      "description": "Repair and maintain heaters to ensure optimal performance.",
+      "categoryId": "67030e9c701f56fbb56ec954"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3196",
+      "title": "Duct Cleaning",
+      "description": "Clean air ducts for better air quality and system efficiency.",
+      "categoryId": "67030e9c701f56fbb56ec954"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3197",
+      "title": "Thermostat Installation",
+      "description": "Install and repair thermostats, including smart thermostats.",
+      "categoryId": "67030e9c701f56fbb56ec954"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3198",
+      "title": "Ventilation System Installation",
+      "description": "Install ventilation systems for improved airflow.",
+      "categoryId": "67030e9c701f56fbb56ec954"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3199",
+      "title": "Indoor Air Quality Services",
+      "description": "Improve indoor air quality through advanced filtration and ventilation.",
+      "categoryId": "67030e9c701f56fbb56ec954"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3200",
+      "title": "Furnace Repair/Installation",
+      "description": "Install and repair furnaces to keep homes warm.",
+      "categoryId": "67030e9c701f56fbb56ec954"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3201",
+      "title": "Refrigerator Repair",
+      "description": "Repair refrigerators to ensure proper cooling and functionality.",
+      "categoryId": "67030e9c701f56fbb56ec955"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3202",
+      "title": "Washer/Dryer Repair",
+      "description": "Repair washing machines and dryers to restore functionality.",
+      "categoryId": "67030e9c701f56fbb56ec955"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3203",
+      "title": "Dishwasher Repair",
+      "description": "Repair dishwashers for optimal cleaning performance.",
+      "categoryId": "67030e9c701f56fbb56ec955"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3204",
+      "title": "Oven & Stove Repair",
+      "description": "Repair ovens and stoves to ensure safe and effective cooking.",
+      "categoryId": "67030e9c701f56fbb56ec955"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3205",
+      "title": "Microwave Repair",
+      "description": "Repair microwave ovens for safe and efficient operation.",
+      "categoryId": "67030e9c701f56fbb56ec955"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3206",
+      "title": "Garbage Disposal Repair",
+      "description": "Repair or replace garbage disposals to ensure kitchen waste management.",
+      "categoryId": "67030e9c701f56fbb56ec955"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3207",
+      "title": "Roof Leak Repair",
+      "description": "Fix roof leaks to prevent water damage.",
+      "categoryId": "67030e9c701f56fbb56ec956"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3208",
+      "title": "Shingle Replacement",
+      "description": "Replace damaged or missing shingles to maintain roof integrity.",
+      "categoryId": "67030e9c701f56fbb56ec956"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3209",
+      "title": "Gutter Repair",
+      "description": "Repair and maintain gutters to ensure proper drainage.",
+      "categoryId": "67030e9c701f56fbb56ec956"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3210",
+      "title": "Skylight Repair/Installation",
+      "description": "Install and repair skylights for natural lighting and ventilation.",
+      "categoryId": "67030e9c701f56fbb56ec956"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3211",
+      "title": "Roof Inspection",
+      "description": "Inspect roofs for damage, leaks, and wear.",
+      "categoryId": "67030e9c701f56fbb56ec956"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3212",
+      "title": "Roof Cleaning",
+      "description": "Clean roofs to remove dirt, moss, and other debris.",
+      "categoryId": "67030e9c701f56fbb56ec956"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3213",
+      "title": "Gutter Installation",
+      "description": "Install gutters for effective rainwater drainage.",
+      "categoryId": "67030e9c701f56fbb56ec957"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3214",
+      "title": "Gutter Cleaning",
+      "description": "Clean gutters to ensure proper water flow and prevent clogs.",
+      "categoryId": "67030e9c701f56fbb56ec957"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3215",
+      "title": "Gutter Guard Installation",
+      "description": "Install gutter guards to prevent debris from clogging gutters.",
+      "categoryId": "67030e9c701f56fbb56ec957"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3216",
+      "title": "Downspout Repair",
+      "description": "Repair downspouts to ensure proper water drainage away from the foundation.",
+      "categoryId": "67030e9c701f56fbb56ec957"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3217",
+      "title": "Basement Waterproofing",
+      "description": "Waterproof basements to prevent leaks and moisture buildup.",
+      "categoryId": "67030e9c701f56fbb56ec958"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3218",
+      "title": "Crawlspace Waterproofing",
+      "description": "Waterproof crawlspaces to protect against moisture and pests.",
+      "categoryId": "67030e9c701f56fbb56ec958"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3219",
+      "title": "Foundation Repair",
+      "description": "Repair foundations to maintain structural integrity of the home.",
+      "categoryId": "67030e9c701f56fbb56ec958"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3220",
+      "title": "Sump Pump Installation",
+      "description": "Install sump pumps to remove water from basements and prevent flooding.",
+      "categoryId": "67030e9c701f56fbb56ec958"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3221",
+      "title": "Interior Painting",
+      "description": "Paint the interiors of homes and businesses with precision and care.",
+      "categoryId": "67030e9c701f56fbb56ec959"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3222",
+      "title": "Exterior Painting",
+      "description": "Paint the exteriors of homes and buildings for enhanced curb appeal.",
+      "categoryId": "67030e9c701f56fbb56ec959"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3223",
+      "title": "Wallpaper Installation/Removal",
+      "description": "Install or remove wallpaper to refresh and update room decor.",
+      "categoryId": "67030e9c701f56fbb56ec959"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3224",
+      "title": "Deck Painting/Staining",
+      "description": "Paint or stain decks to protect them from the elements and improve appearance.",
+      "categoryId": "67030e9c701f56fbb56ec959"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3225",
+      "title": "Fence Painting",
+      "description": "Paint fences to enhance durability and aesthetic appeal.",
+      "categoryId": "67030e9c701f56fbb56ec959"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3226",
+      "title": "Window Glass Replacement",
+      "description": "Replace broken or damaged window glass for improved insulation and security.",
+      "categoryId": "67030e9c701f56fbb56ec960"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3227",
+      "title": "Window Screen Repair",
+      "description": "Repair or replace window screens to keep bugs out and let fresh air in.",
+      "categoryId": "67030e9c701f56fbb56ec960"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3228",
+      "title": "Door Installation/Repair",
+      "description": "Install or repair doors for homes and businesses.",
+      "categoryId": "67030e9c701f56fbb56ec960"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3229",
+      "title": "Sliding Door Repair",
+      "description": "Repair sliding doors to ensure smooth operation.",
+      "categoryId": "67030e9c701f56fbb56ec960"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3230",
+      "title": "Weatherstripping Installation",
+      "description": "Install weatherstripping to seal gaps and improve energy efficiency.",
+      "categoryId": "67030e9c701f56fbb56ec960"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3231",
+      "title": "Hardwood Floor Installation",
+      "description": "Install hardwood flooring for a beautiful and durable finish.",
+      "categoryId": "67030e9c701f56fbb56ec961"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3232",
+      "title": "Tile Floor Installation",
+      "description": "Install tile flooring for kitchens, bathrooms, and other areas.",
+      "categoryId": "67030e9c701f56fbb56ec961"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3233",
+      "title": "Laminate Flooring",
+      "description": "Install laminate flooring for a cost-effective and durable solution.",
+      "categoryId": "67030e9c701f56fbb56ec961"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3234",
+      "title": "Carpet Installation",
+      "description": "Install carpet in homes and offices for comfort and warmth.",
+      "categoryId": "67030e9c701f56fbb56ec961"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3235",
+      "title": "Floor Refinishing",
+      "description": "Refinish hardwood floors to restore their natural beauty.",
+      "categoryId": "67030e9c701f56fbb56ec961"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3236",
+      "title": "Flooring Repairs",
+      "description": "Repair damaged flooring for improved appearance and safety.",
+      "categoryId": "67030e9c701f56fbb56ec961"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3237",
+      "title": "Garage Door Installation",
+      "description": "Install garage doors to enhance security and convenience.",
+      "categoryId": "67030e9c701f56fbb56ec962"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3238",
+      "title": "Opener Repair/Installation",
+      "description": "Repair or install garage door openers for smooth operation.",
+      "categoryId": "67030e9c701f56fbb56ec962"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3239",
+      "title": "Spring Replacement",
+      "description": "Replace broken garage door springs for safe operation.",
+      "categoryId": "67030e9c701f56fbb56ec962"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3240",
+      "title": "Garage Door Maintenance",
+      "description": "Maintain garage doors to prevent breakdowns and ensure smooth operation.",
+      "categoryId": "67030e9c701f56fbb56ec962"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3241",
+      "title": "Standard Cleaning",
+      "description": "Provide routine cleaning services for homes and offices.",
+      "categoryId": "67030e9c701f56fbb56ec963"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3242",
+      "title": "Deep Cleaning",
+      "description": "Provide thorough cleaning for homes and offices.",
+      "categoryId": "67030e9c701f56fbb56ec963"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3243",
+      "title": "Move-in/Move-out Cleaning",
+      "description": "Clean homes before or after moving in or out.",
+      "categoryId": "67030e9c701f56fbb56ec963"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3244",
+      "title": "Post-Construction Cleaning",
+      "description": "Clean up homes and offices after construction work is completed.",
+      "categoryId": "67030e9c701f56fbb56ec963"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3245",
+      "title": "Eco-Friendly Cleaning",
+      "description": "Provide environmentally friendly cleaning services.",
+      "categoryId": "67030e9c701f56fbb56ec963"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3246",
+      "title": "Interior/Exterior Window Cleaning",
+      "description": "Clean windows inside and out for improved visibility and appearance.",
+      "categoryId": "67030e9c701f56fbb56ec964"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3247",
+      "title": "High-Rise Window Cleaning",
+      "description": "Provide window cleaning services for high-rise buildings.",
+      "categoryId": "67030e9c701f56fbb56ec964"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3248",
+      "title": "Skylight Cleaning",
+      "description": "Clean skylights to allow natural light to shine through.",
+      "categoryId": "67030e9c701f56fbb56ec964"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3249",
+      "title": "Screen Cleaning",
+      "description": "Clean window screens to remove dirt and debris.",
+      "categoryId": "67030e9c701f56fbb56ec964"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3250",
+      "title": "Steam Cleaning",
+      "description": "Provide steam cleaning services for carpets and upholstery.",
+      "categoryId": "67030e9c701f56fbb56ec965"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3251",
+      "title": "Stain Removal",
+      "description": "Remove stubborn stains from carpets and rugs.",
+      "categoryId": "67030e9c701f56fbb56ec965"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3252",
+      "title": "Pet Odor Removal",
+      "description": "Eliminate pet odors from carpets and upholstery.",
+      "categoryId": "67030e9c701f56fbb56ec965"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3253",
+      "title": "Area Rug Cleaning",
+      "description": "Clean area rugs to remove dirt and allergens.",
+      "categoryId": "67030e9c701f56fbb56ec965"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3254",
+      "title": "Sofa/Chair Cleaning",
+      "description": "Provide cleaning services for upholstered furniture.",
+      "categoryId": "67030e9c701f56fbb56ec966"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3255",
+      "title": "Mattress Cleaning",
+      "description": "Clean mattresses to remove dirt and allergens.",
+      "categoryId": "67030e9c701f56fbb56ec966"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3256",
+      "title": "Leather Furniture Cleaning",
+      "description": "Clean and condition leather furniture.",
+      "categoryId": "67030e9c701f56fbb56ec966"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3257",
+      "title": "Insect Extermination",
+      "description": "Exterminate insects from homes and businesses.",
+      "categoryId": "67030e9c701f56fbb56ec967"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3258",
+      "title": "Rodent Control",
+      "description": "Control and remove rodents from properties.",
+      "categoryId": "67030e9c701f56fbb56ec967"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3259",
+      "title": "Termite Inspection/Treatment",
+      "description": "Inspect and treat homes for termites.",
+      "categoryId": "67030e9c701f56fbb56ec967"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3260",
+      "title": "Bed Bug Treatment",
+      "description": "Provide treatment to eliminate bed bugs from homes and businesses.",
+      "categoryId": "67030e9c701f56fbb56ec967"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3261",
+      "title": "Mosquito Control",
+      "description": "Control mosquito populations in outdoor areas.",
+      "categoryId": "67030e9c701f56fbb56ec967"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3262",
+      "title": "Wildlife Removal",
+      "description": "Remove wildlife from residential and commercial properties.",
+      "categoryId": "67030e9c701f56fbb56ec967"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3263",
+      "title": "Lawn Mowing",
+      "description": "Mow lawns to maintain a neat and tidy appearance.",
+      "categoryId": "67030e9c701f56fbb56ec968"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3264",
+      "title": "Hedge Trimming",
+      "description": "Trim hedges for a neat and manicured look.",
+      "categoryId": "67030e9c701f56fbb56ec968"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3265",
+      "title": "Flower Bed Maintenance",
+      "description": "Maintain flower beds for healthy and vibrant plants.",
+      "categoryId": "67030e9c701f56fbb56ec968"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3266",
+      "title": "Tree Trimming/Pruning",
+      "description": "Trim and prune trees for health and aesthetics.",
+      "categoryId": "67030e9c701f56fbb56ec968"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3267",
+      "title": "Sod Installation",
+      "description": "Install sod for new or renovated lawns.",
+      "categoryId": "67030e9c701f56fbb56ec968"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3268",
+      "title": "Weed Control",
+      "description": "Control and remove weeds from lawns and gardens.",
+      "categoryId": "67030e9c701f56fbb56ec968"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3269",
+      "title": "Lawn Aeration",
+      "description": "Aerate lawns to promote healthy growth.",
+      "categoryId": "67030e9c701f56fbb56ec968"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3270",
+      "title": "Pool Cleaning",
+      "description": "Clean pools to maintain water clarity and hygiene.",
+      "categoryId": "67030e9c701f56fbb56ec969"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3271",
+      "title": "Filter Repair",
+      "description": "Repair or replace pool filters for proper water circulation.",
+      "categoryId": "67030e9c701f56fbb56ec969"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3272",
+      "title": "Pool Heater Installation/Repair",
+      "description": "Install or repair pool heaters to maintain comfortable water temperatures.",
+      "categoryId": "67030e9c701f56fbb56ec969"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3273",
+      "title": "Pool Chemical Balancing",
+      "description": "Balance pool chemicals for safe and clear water.",
+      "categoryId": "67030e9c701f56fbb56ec969"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3274",
+      "title": "Room Design Consultation",
+      "description": "Consult on room design to create functional and aesthetically pleasing spaces.",
+      "categoryId": "67030e9c701f56fbb56ec970"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3275",
+      "title": "Color Consultation",
+      "description": "Provide advice on color schemes for rooms and homes.",
+      "categoryId": "67030e9c701f56fbb56ec970"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3276",
+      "title": "Furniture Layout Design",
+      "description": "Design furniture layouts to maximize space and functionality.",
+      "categoryId": "67030e9c701f56fbb56ec970"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3277",
+      "title": "Lighting Design",
+      "description": "Design lighting plans for functional and aesthetic lighting solutions.",
+      "categoryId": "67030e9c701f56fbb56ec970"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3278",
+      "title": "Security Camera Installation",
+      "description": "Install security cameras to monitor homes and businesses.",
+      "categoryId": "67030e9c701f56fbb56ec971"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3279",
+      "title": "Alarm System Installation",
+      "description": "Install alarm systems to protect homes and businesses.",
+      "categoryId": "67030e9c701f56fbb56ec971"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3280",
+      "title": "Smart Lock Installation",
+      "description": "Install smart locks for enhanced security and convenience.",
+      "categoryId": "67030e9c701f56fbb56ec971"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3281",
+      "title": "Video Doorbell Installation",
+      "description": "Install video doorbells to monitor visitors and enhance security.",
+      "categoryId": "67030e9c701f56fbb56ec971"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3282",
+      "title": "Smart Lighting Installation",
+      "description": "Install smart lighting systems for automated control.",
+      "categoryId": "67030e9c701f56fbb56ec972"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3283",
+      "title": "Smart Thermostat Installation",
+      "description": "Install smart thermostats for energy-efficient temperature control.",
+      "categoryId": "67030e9c701f56fbb56ec972"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3284",
+      "title": "Home Automation Setup",
+      "description": "Set up home automation systems for lighting, security, and more.",
+      "categoryId": "67030e9c701f56fbb56ec972"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3285",
+      "title": "Packing & Unpacking",
+      "description": "Help with packing and unpacking during a move.",
+      "categoryId": "67030e9c701f56fbb56ec973"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3286",
+      "title": "Local/Long-Distance Moving",
+      "description": "Assist with local and long-distance moves.",
+      "categoryId": "67030e9c701f56fbb56ec973"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3287",
+      "title": "Furniture Moving",
+      "description": "Move furniture safely and efficiently.",
+      "categoryId": "67030e9c701f56fbb56ec973"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3288",
+      "title": "Storage Solutions",
+      "description": "Provide storage solutions for moves or home organization.",
+      "categoryId": "67030e9c701f56fbb56ec973"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3289",
+      "title": "In-home Massage",
+      "description": "Provide relaxing massage therapy in the comfort of your home.",
+      "categoryId": "67030e9c701f56fbb56ec974"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3290",
+      "title": "Deep Tissue Massage",
+      "description": "Offer deep tissue massage to relieve tension and muscle pain.",
+      "categoryId": "67030e9c701f56fbb56ec974"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3291",
+      "title": "Swedish Massage",
+      "description": "Provide Swedish massage for relaxation and stress relief.",
+      "categoryId": "67030e9c701f56fbb56ec974"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3292",
+      "title": "Hot Stone Massage",
+      "description": "Offer hot stone massage for deep relaxation and muscle tension relief.",
+      "categoryId": "67030e9c701f56fbb56ec974"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3293",
+      "title": "Haircut & Styling",
+      "description": "Provide in-home haircut and styling services.",
+      "categoryId": "67030e9c701f56fbb56ec975"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3294",
+      "title": "Manicure/Pedicure",
+      "description": "Offer manicure and pedicure services at home.",
+      "categoryId": "67030e9c701f56fbb56ec975"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3295",
+      "title": "Waxing Services",
+      "description": "Provide waxing services for smooth, hair-free skin.",
+      "categoryId": "67030e9c701f56fbb56ec975"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3296",
+      "title": "Facials",
+      "description": "Offer facial treatments for glowing, healthy skin.",
+      "categoryId": "67030e9c701f56fbb56ec975"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3297",
+      "title": "Makeup Services",
+      "description": "Provide professional makeup services for special events.",
+      "categoryId": "67030e9c701f56fbb56ec975"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3298",
+      "title": "Kitchen Renovation",
+      "description": "Renovate kitchens to enhance functionality and design.",
+      "categoryId": "67030e9c701f56fbb56ec976"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3299",
+      "title": "Bathroom Remodeling",
+      "description": "Remodel bathrooms to improve aesthetics and usability.",
+      "categoryId": "67030e9c701f56fbb56ec976"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3300",
+      "title": "Basement Finishing",
+      "description": "Finish basements to create additional living or storage space.",
+      "categoryId": "67030e9c701f56fbb56ec976"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3301",
+      "title": "Room Additions",
+      "description": "Add rooms to homes to increase living space.",
+      "categoryId": "67030e9c701f56fbb56ec976"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3302",
+      "title": "Furniture Removal",
+      "description": "Remove unwanted furniture from homes and businesses.",
+      "categoryId": "67030e9c701f56fbb56ec977"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3303",
+      "title": "Appliance Removal",
+      "description": "Remove old or broken appliances from homes and offices.",
+      "categoryId": "67030e9c701f56fbb56ec977"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3304",
+      "title": "Yard Waste Removal",
+      "description": "Remove yard waste and debris from gardens and lawns.",
+      "categoryId": "67030e9c701f56fbb56ec977"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3305",
+      "title": "Electronics Recycling",
+      "description": "Recycle unwanted or outdated electronics responsibly.",
+      "categoryId": "67030e9c701f56fbb56ec977"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3306",
+      "title": "Wooden Fence Installation/Repair",
+      "description": "Install and repair wooden fences for homes and businesses.",
+      "categoryId": "67030e9c701f56fbb56ec978"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3307",
+      "title": "Vinyl Fence Installation",
+      "description": "Install vinyl fences for durable and low-maintenance boundaries.",
+      "categoryId": "67030e9c701f56fbb56ec978"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3308",
+      "title": "Chain-link Fence Repair",
+      "description": "Repair chain-link fences to restore security and function.",
+      "categoryId": "67030e9c701f56fbb56ec978"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3309",
+      "title": "Driveway Snow Removal",
+      "description": "Remove snow from driveways to ensure safe access.",
+      "categoryId": "67030e9c701f56fbb56ec979"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3310",
+      "title": "Walkway Shoveling",
+      "description": "Shovel snow from walkways to prevent slips and falls.",
+      "categoryId": "67030e9c701f56fbb56ec979"
+  },
+  {
+      "_id": "6707a24315c72b0cbb0a3311",
+      "title": "Roof Snow Removal",
+      "description": "Remove snow from roofs to prevent damage and ice buildup.",
+      "categoryId": "67030e9c701f56fbb56ec979"
+  }
+]

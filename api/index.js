@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const authenticateUser = require('./middlewares/authenticateUser');
-const app = express();  // Fixed the incomplete variable 'app'
+const app = express();
+const axios = require('axios');
 
 const userRoutes = require('./routes/userRoutes');
 const serviceRoutes = require('./routes/serviceRoutes');
@@ -43,6 +43,48 @@ app.use('/api/service', serviceRoutes);
 app.use('/api/service-provider', serviceProviderRoutes);
 app.use('/api/category', categoriesRoutes);
 app.use('/api/booking', bookingRoutes);
+
+// Temporary Route to test Google Places API
+app.get('/api/places', async (req, res) => {
+  const { latitude, longitude, keyword } = req.query;  // Allow dynamic location and category through query params
+  const radius = 5000;  // Search within a 5 km radius
+
+  const googleApiUrl = `https://maps.googleapis.com/maps/api/place/textsearch/json?location=${latitude},${longitude}&radius=${radius}&query=${keyword}&key=${process.env.GOOGLE_PLACES_API_KEY}`;
+
+  try {
+    const response = await axios.get(googleApiUrl);
+    const places = response.data.results;
+
+    if (places.length > 0) {
+      const filteredPlaces = places.map(place => ({
+        business_status: place.business_status,
+        geometry: place.geometry,
+        name: place.name,
+        photos: place.photos ? place.photos.map(photo => ({
+          photo_reference: photo.photo_reference,
+          html_attributions: photo.html_attributions
+        })) : [],
+        place_id: place.place_id,
+        rating: place.rating,
+        user_ratings_total: place.user_ratings_total,
+        vicinity: place.vicinity
+      }));
+
+      res.json({
+        message: `Found ${places.length} places for category: ${keyword}`,
+        places: filteredPlaces
+      });
+    } else {
+      res.status(404).json({ message: 'No places found.' });
+    }
+  } catch (error) {
+    console.error('Error fetching data from Google Places API:', error);
+    res.status(500).json({ error: 'Error fetching places data' });
+  }
+});
+
+
+
 
 // Start the server
 app.listen(4000, (err) => {

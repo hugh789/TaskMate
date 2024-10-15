@@ -29,8 +29,13 @@ router.post('/register', authenticateUser, async (req, res) => {
 
 // GET: Fetch all services
 router.get('/all', async (req, res) => {
+  const { categoryId } = req.query;
+  const filter = categoryId ? { 'categoryId': categoryId } : {};
+  console.log(filter)
+
   try {
-    const services = await ServicesModel.find();
+    const services = await ServicesModel.find(filter);
+    console.log(services)
     res.status(200).json(services);
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' });
