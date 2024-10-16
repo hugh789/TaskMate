@@ -31,28 +31,10 @@ router.post('/register', authenticateUser, async (req, res) => {
 router.get('/all', async (req, res) => {
   const { categoryId } = req.query;
   const filter = categoryId ? { 'categoryId': categoryId } : {};
-  console.log(filter)
 
   try {
     const services = await ServicesModel.find(filter);
-    console.log(services)
     res.status(200).json(services);
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
-
-// GET: Fetch services by category
-router.get('/by-category/:categoryId', async (req, res) => {
-  const { categoryId } = req.params;
-  try {
-    const category = await CategoryModel.findById(categoryId);
-    if (!category) {
-      return res.status(404).json({ error: 'Category not found' });
-    }
-
-    const services = await ServicesModel.find({ categoryId });
-    res.status(200).json({ services, category });
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' });
   }

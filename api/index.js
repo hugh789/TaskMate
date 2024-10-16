@@ -46,53 +46,6 @@ app.use('/api/service-provider', serviceProviderRoutes);
 app.use('/api/category', categoriesRoutes);
 app.use('/api/booking', bookingRoutes);
 
-// Temporary Route to test Google Places API
-// Temporary Route to test Google Places API and merge with our service provider data
-app.get('/api/places', async (req, res) => {
-  const { latitude, longitude, keyword, categoryId } = req.query;  // Added categoryId query param for our database
-  const radius = 5000;  // Search within a 5 km radius
-
-  const googleApiUrl = `https://maps.googleapis.com/maps/api/place/textsearch/json?location=${latitude},${longitude}&radius=${radius}&query=${keyword}&key=${process.env.GOOGLE_PLACES_API_KEY}`;
-
-  try {
-    // Fetch data from Google Places API
-    const googleResponse = await axios.get(googleApiUrl);
-    const googlePlaces = googleResponse.data.results.map(place => ({
-      business_status: place.business_status,
-      geometry: place.geometry,
-      name: place.name,
-      photos: place.photos ? place.photos.map(photo => ({
-        photo_reference: photo.photo_reference,
-        html_attributions: photo.html_attributions
-      })) : [],
-      place_id: place.place_id,
-      rating: place.rating,
-      user_ratings_total: place.user_ratings_total,
-      vicinity: place.vicinity
-    }));
-
-    // Fetch data from our MongoDB based on categoryId
-    const localServices = await ServicesModel.find({ categoryId: categoryId });
-
-    // Combine Google Places data with local services
-    const combinedResults = {
-      googlePlaces,
-      localServices
-    };
-
-    // Return the combined result
-    res.json({
-      message: `Found ${googlePlaces.length} Google Places and ${localServices.length} local services for keyword: ${keyword}`,
-      combinedResults
-    });
-  } catch (error) {
-    console.error('Error fetching data from Google Places API or database:', error);
-    res.status(500).json({ error: 'Error fetching places or services data' });
-  }
-});
-
-
-
 // Start the server
 app.listen(4000, (err) => {
   if (err) {

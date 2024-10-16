@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const { v4: uuidv4 } = require('uuid');  // Import the UUID v4 generator
 
 const BookingSchema = new Schema({
+  _id: { type: String, default: uuidv4 },  // Auto-generate _id as a string using UUID
   userId: {
     type: Schema.Types.ObjectId,
     ref: 'User',
