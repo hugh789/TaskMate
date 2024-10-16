@@ -11,18 +11,21 @@ export default function CategoryServicesPage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch services under this category
-    axios.get(`http://localhost:4000/api/service/by-category/${categoryId}`)
-      .then((response) => {
+    const fetchServices = async () => {
+      try {
+        // Fetch services under this category
+        const response = await axios.get(`http://localhost:4000/api/service/by-category/${categoryId}`);
         setServices(response.data.services);
         setCategory(response.data.category);
-        setLoading(false);
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error('Error fetching services:', error);
         setError('Error fetching services. Please try again later.');
+      } finally {
         setLoading(false);
-      });
+      }
+    };
+
+    fetchServices();
   }, [categoryId]);
 
   if (loading) return <div className="text-center py-8">Loading...</div>;
