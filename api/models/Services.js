@@ -1,16 +1,12 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
+const { v4: uuidv4 } = require('uuid');  // Import the UUID v4 generator
 
 const ServicesSchema = new Schema({
+    _id: { type: String, default: uuidv4 },  // Auto-generate _id as a string using UUID
     title: { type: String, required: true },
     description: { type: String, required: true },
-    categoryId: { type: mongoose.Schema.Types.ObjectId, ref: 'Category', required: true } // Reference to Category
-  //  price: { type: Number, required: true },
-   // location: { type: String, required: true },
-   // createdAt: { type: Date, default: Date.now },
-   // reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Review' }],
-   // rating: { type: Number, default: 0 },  // Overall average rating
-   // ratingsCount: { type: Number, default: 0 }  // Number of ratings
+    categoryId: { type: String, ref: 'Category', required: true } // Reference to Category
 });
 
 const ServicesModel = mongoose.model('Services', ServicesSchema);

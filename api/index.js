@@ -3,8 +3,10 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const authenticateUser = require('./middlewares/authenticateUser');
-const app = express();  // Fixed the incomplete variable 'app'
+const app = express();
+const axios = require('axios');
+
+const ServicesModel = require('./models/Services');  // Ensure the correct path to your model file
 
 const userRoutes = require('./routes/userRoutes');
 const serviceRoutes = require('./routes/serviceRoutes');
