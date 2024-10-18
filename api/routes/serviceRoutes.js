@@ -5,6 +5,12 @@ const authenticateUser = require('../middlewares/authenticateUser');
 
 const router = express.Router();
 
+
+router.get('/all', async (req, res) => {
+  const services = await ServicesModel.find();
+  res.json(services);
+});
+
 // POST: Create a new service
 router.post('/register', authenticateUser, async (req, res) => {
   const { title, description, categoryId } = req.body;
