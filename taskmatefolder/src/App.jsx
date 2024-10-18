@@ -36,7 +36,7 @@ function App() {
           <Route path="/find-task" element={<FindTask />} />
           <Route path="/review" element={<Reviews />} />
           <Route path="/bookings/submit" element={<BookingsPage />} />
-          <Route path="/category/:categoryId" element={<CategoryServicesPage />} /> {/* Updated route */}
+          <Route path="/categories/:categoryId/services" element={<CategoryServicesPage />} /> 
         </Route>
       </Routes>
     </UserContextProvider>
