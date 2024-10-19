@@ -1,6 +1,8 @@
+// routes/checkoutRoutes.js
 const express = require('express');
 const router = express.Router();
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); // Use your secret key
+console.log('Stripe Secret Key:', process.env.STRIPE_SECRET_KEY);
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 // POST: Create a Stripe Checkout session
 router.post('/create-checkout-session', async (req, res) => {
@@ -12,7 +14,7 @@ router.post('/create-checkout-session', async (req, res) => {
       line_items: [
         {
           price_data: {
-            currency: 'aud',
+            currency: 'usd',
             product_data: {
               name: `Service: ${serviceId}`,
             },
@@ -28,7 +30,7 @@ router.post('/create-checkout-session', async (req, res) => {
 
     res.json({ id: session.id });
   } catch (error) {
-    console.error(error);
+    console.error('Stripe session creation error:', error);
     res.status(500).json({ error: 'Something went wrong with creating the session.' });
   }
 });

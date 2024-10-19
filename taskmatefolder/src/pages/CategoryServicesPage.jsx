@@ -31,17 +31,27 @@ export default function CategoryServicesPage() {
     fetchServices();
   }, [categoryId]);
 
-  const handleCheckout = async (serviceId) => {
+  const handleCheckout = async (serviceId, price) => {
     try {
-      const session = await axios.post('http://localhost:4000/api/stripe/create-checkout-session', {
+      const response = await axios.post('http://localhost:4000/api/checkout/create-checkout-session', {
         serviceId,
+        price,  // Ensure this value is provided in cents
       });
-      const stripe = await stripePromise;
-      await stripe.redirectToCheckout({ sessionId: session.data.id });
+      
+      const { id } = response.data;
+      
+      // Redirect to Stripe Checkout
+      const stripe = await loadStripe(process.env.VITE_STRIPE_PUBLISHABLE_KEY);
+      const { error } = await stripe.redirectToCheckout({ sessionId: id });
+  
+      if (error) {
+        console.error('Error redirecting to checkout:', error);
+      }
     } catch (error) {
-      console.error("Error during checkout:", error);
+      console.error('Error creating checkout session:', error);
     }
   };
+  
 
   if (loading) return <div className="text-center py-8">Loading...</div>;
   if (error) return <div className="text-red-500 text-center py-8">{error}</div>;

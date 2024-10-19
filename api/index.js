@@ -12,7 +12,7 @@ const serviceRoutes = require('./routes/serviceRoutes');
 const serviceProviderRoutes = require('./routes/serviceProviderRoutes');
 const categoriesRoutes = require('./routes/categoriesRoutes');
 const bookingRoutes = require('./routes/bookingRoutes');
-const checkoutRoutes = require('./routes/checkoutRoutes');
+const checkoutRoutes = require('./routes/checkoutRoutes');  // Include the checkout routes
 
 // Middleware for CORS, JSON, and cookie parsing
 app.use(cors({
@@ -35,24 +35,13 @@ mongoose.connect(process.env.MONGO_URL, {
     process.exit(1); // Exit if there's a MongoDB connection error
   });
 
-// Check and validate if the route modules are functions (middlewares)
-if (typeof userRoutes === 'function') app.use('/api/user', userRoutes);
-else console.error('Error: userRoutes is not a function');
-
-if (typeof serviceRoutes === 'function') app.use('/api/service', serviceRoutes);
-else console.error('Error: serviceRoutes is not a function');
-
-if (typeof serviceProviderRoutes === 'function') app.use('/api/service-provider', serviceProviderRoutes);
-else console.error('Error: serviceProviderRoutes is not a function');
-
-if (typeof categoriesRoutes === 'function') app.use('/api/category', categoriesRoutes);
-else console.error('Error: categoriesRoutes is not a function');
-
-if (typeof bookingRoutes === 'function') app.use('/api/booking', bookingRoutes);
-else console.error('Error: bookingRoutes is not a function');
-
-if (typeof checkoutRoutes === 'function') app.use('/api/checkout', checkoutRoutes);
-else console.error('Error: checkoutRoutes is not a function');
+// Routes
+app.use('/api/user', userRoutes);
+app.use('/api/service', serviceRoutes);
+app.use('/api/service-provider', serviceProviderRoutes);
+app.use('/api/category', categoriesRoutes);
+app.use('/api/booking', bookingRoutes);
+app.use('/api/checkout', checkoutRoutes);  // Register the checkout routes
 
 // Start the server
 app.listen(4000, (err) => {
