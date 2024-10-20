@@ -5,7 +5,8 @@ import { useParams, Link } from "react-router-dom";
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
+const stripePromise = loadStripe('pk_test_51Q9heqP1rqCue6MCxHV86BzJg7dBFEh7j3mgMmsV8cQvkOWKohThJfA0uGEhLWOqdBIH7tDpWJJiCiD6c1hOkL5w00i3Dj4IAp');
+
 
 export default function CategoryServicesPage() {
   const { categoryId } = useParams();
@@ -40,8 +41,8 @@ export default function CategoryServicesPage() {
       
       const { id } = response.data;
       
-      // Redirect to Stripe Checkout
-      const stripe = await loadStripe(process.env.VITE_STRIPE_PUBLISHABLE_KEY);
+      // Use the stripePromise directly
+      const stripe = await stripePromise;
       const { error } = await stripe.redirectToCheckout({ sessionId: id });
   
       if (error) {
@@ -51,7 +52,6 @@ export default function CategoryServicesPage() {
       console.error('Error creating checkout session:', error);
     }
   };
-  
 
   if (loading) return <div className="text-center py-8">Loading...</div>;
   if (error) return <div className="text-red-500 text-center py-8">{error}</div>;
@@ -75,7 +75,7 @@ export default function CategoryServicesPage() {
                   <p className="font-bold text-xl">${service.price}</p>
                   <button
                     className="btn btn-primary mt-4"
-                    onClick={() => handleCheckout(service._id)}
+                    onClick={() => handleCheckout(service._id, service.price)}  // Pass service price here
                   >
                     Checkout with Stripe
                   </button>
