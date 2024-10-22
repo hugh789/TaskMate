@@ -110,7 +110,11 @@ router.get('/all', async (req, res) => {
             rating: placeDetails.rating,
             user_ratings_total: placeDetails.user_ratings_total,
             business_status: placeDetails.business_status,
-            reviews: placeDetails.reviews ? placeDetails.reviews.slice(0, 2) : []
+            reviews: placeDetails.reviews ? placeDetails.reviews.slice(0, 2) : [],
+            location: {
+              lat: placeDetails.geometry.location.lat, // Add latitude
+              lng: placeDetails.geometry.location.lng  // Add longitude
+            }
           };
         } catch (error) {
           console.error('Error fetching place details from Google Places API:', error);
@@ -153,7 +157,11 @@ router.get('/all', async (req, res) => {
                 address: place.vicinity,  // Using vicinity instead of formatted_address for nearby search
                 rating: place.rating,
                 user_ratings_total: place.user_ratings_total,
-                business_status: place.business_status
+                business_status: place.business_status,
+                location: {
+                  lat: place.geometry.location.lat, // Add latitude
+                  lng: place.geometry.location.lng  // Add longitude
+                }
               };
 
               // Push the nearby place to the final response
@@ -176,5 +184,6 @@ router.get('/all', async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
+
 
 module.exports = router;

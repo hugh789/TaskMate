@@ -7,7 +7,6 @@ import { loadStripe } from '@stripe/stripe-js';
 
 const stripePromise = loadStripe('pk_test_51Q9heqP1rqCue6MCxHV86BzJg7dBFEh7j3mgMmsV8cQvkOWKohThJfA0uGEhLWOqdBIH7tDpWJJiCiD6c1hOkL5w00i3Dj4IAp');
 
-
 export default function CategoryServicesPage() {
   const { categoryId } = useParams();
   const [services, setServices] = useState([]);
@@ -18,7 +17,7 @@ export default function CategoryServicesPage() {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/api/service/by-category/${categoryId}`);
+        const response = await axios.get(`/api/service/by-category/${categoryId}`);
         setServices(response.data.services || []);
         setCategory(response.data.category || null);
       } catch (error) {
@@ -67,20 +66,27 @@ export default function CategoryServicesPage() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.length > 0 ? (
             services.map((service) => (
-              <div key={service._id} className="card shadow-lg bg-white rounded-lg">
-                <img src={service.imageUrl} alt={service.title} className="w-full h-48 object-cover rounded-t-lg" />
+              <Link 
+                key={service._id} 
+                to={`/service/${service._id}`}  // Navigate to the service providers page
+                state={{ title: service.title }} // Pass the service title
+                className="block card shadow-lg bg-white rounded-lg hover:shadow-xl transition-shadow duration-300"
+              >
                 <div className="p-4">
                   <h2 className="text-2xl font-semibold">{service.title}</h2>
                   <p className="text-gray-600 my-2">{service.description}</p>
                   <p className="font-bold text-xl">${service.price}</p>
                   <button
                     className="btn btn-primary mt-4"
-                    onClick={() => handleCheckout(service._id, service.price)}  // Pass service price here
+                    onClick={(e) => {
+                      e.preventDefault();  // Prevent navigation to handle checkout instead
+                      handleCheckout(service._id, service.price);
+                    }}
                   >
                     Checkout with Stripe
                   </button>
                 </div>
-              </div>
+              </Link>
             ))
           ) : (
             <p className="text-center text-gray-600">No services found for this category.</p>

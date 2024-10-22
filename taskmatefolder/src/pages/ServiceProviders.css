@@ -1,0 +1,98 @@
+.container {
+  display: flex; /* Use flexbox for layout */
+}
+
+.provider-list {
+  flex: 1; /* Take up 1 part of the flex container */
+  padding-right: 20px; /* Space between the list and the map */
+  overflow-y: auto; /* Allow scrolling if the list is long */
+  max-height: 80vh; /* Set max height for vertical space */
+}
+
+.map-container {
+  flex: 2; /* Take up 2 parts of the flex container */
+  height: 80vh; /* Set a height for the map */
+}
+
+.marker {
+  position: relative;
+  cursor: pointer;
+}
+
+.marker-icon {
+  font-size: 24px; /* Adjust size as needed */
+  color: red; /* Marker color */
+}
+
+.marker-text {
+  display: none; /* Hide text by default */
+  position: absolute;
+  background: white;
+  border: 1px solid red;
+  padding: 4px;
+  border-radius: 4px;
+  top: -30px; /* Adjust positioning */
+  left: -20px; /* Adjust positioning */
+  font-size: 12px; /* Adjust text size */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.marker:hover .marker-text {
+  display: block; /* Show text on hover */
+}
+
+.highlight {
+  border-color: blue; /* Change border color to highlight */
+  background-color: #e0f7fa; /* Change background color for highlighted provider */
+}
+
+.marker.selected .marker-icon {
+  color: blue; /* Change marker color for the selected provider */
+  font-size: 28px; /* Slightly larger size for visibility */
+}
+
+.marker.selected .marker-text {
+  display: block; /* Always show the text when selected */
+}
+
+.tag-wrapper {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Align to the right */
+  z-index: 1; /* Make sure it appears above the card */
+}
+
+.tag-wrapper span {
+  margin-bottom: 4px; /* Space between tags */
+}
+
+.verified {
+  background-color: green; /* Change as needed */
+  color: white;
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 8px; /* Space between the tag and provider name */
+}
+
+/* Price and Book button styles */
+.book-button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.book-button:hover {
+  background-color: #0056b3;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+}
