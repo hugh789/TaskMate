@@ -5,17 +5,17 @@ const { v4: uuidv4 } = require('uuid');  // Import the UUID v4 generator
 const BookingSchema = new Schema({
   _id: { type: String, default: uuidv4 },  // Auto-generate _id as a string using UUID
   userId: {
-    type: Schema.Types.ObjectId,
+    type: String,
     ref: 'User',
     required: true
   },
   serviceProviderId: {
-    type: Schema.Types.ObjectId,
+    type: String,
     ref: 'ServiceProvider',
     required: true
   },
   serviceId: {
-    type: Schema.Types.ObjectId,
+    type: String,
     ref: 'Service',
     required: true
   },
