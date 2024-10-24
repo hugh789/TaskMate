@@ -10,7 +10,7 @@ const ServiceProviderSchema = new Schema({
     serviceId: { type: mongoose.Schema.Types.ObjectId, ref: 'Services', required: true },  // Reference to Services
     servicePrice: { type: Number, required: true }  // Price for that specific service
   }],
-  location: { type: String, required: true },
+  location: { type: String},
   place_id: { type: String },  // Google Places place_id
   createdAt: { type: Date, default: Date.now },
   reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Review' }]

@@ -1,6 +1,8 @@
+require('dotenv').config();
+require('dotenv').config({ path: '.env.local' });
+
 const express = require('express');
 const mongoose = require('mongoose');
-require('dotenv').config();
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);  // Access Stripe secret key
